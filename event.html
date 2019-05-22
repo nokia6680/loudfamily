@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Мой шумный дом | Nickelodeon</title>
+	<title>Загрузи фото | Nickelodeon</title>
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
@@ -63,41 +63,54 @@
 				</div>
 			</div>
 			<!--Основная часть-->
-			<div class="main__content content">
+			<div class="main__content content content--event">
 				<!--Блок с картиной только для десктопов-->
-				<div class="content__left left">
-					<img class="left__img" src="img/frame-1.svg" alt="Семейный портрет" />
+				<div class="content__left left left--event">
+					<p class="left__description">Загрузи фото и оставь номер телефона для связи</p>
 				</div>
 				<!--Блок с основным содержанием-->
-				<div class="content__middle middle">
-					<h1 class="middle__title visually-hidden">Мой шумный дом</h1>
-					<p class="middle__description">Хочешь увидеть, каким героем &laquo;Моего шумного дома&raquo; ты мог бы стать? Отправь нам своё семейное фото и получи шанс выиграть портрет от создателей шоу &mdash; твою семью нарисуют в стиле любимого мультфильма!</p>
-					<!--Только для мобильной-планшетной версий-->
-					<div class="middle__play">
-						<div class="middle__wrap">
-							<iframe class="middle__video" src="https://www.youtube.com/embed/9Y4WItnbIAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="content__middle middle middle--event">
+					<h1 class="middle__title visually-hidden">Загрузка фото</h1>
+					<!--Форма загрузки-->
+					<form class="middle__form upload-form" method="post" action="#">
+						<!--Контейнер содержимого формы ДО отправки-->
+						<div class="upload-form__wrapper upload-form__wrapper--choose">
+							<p class="upload-form__description">Выбери фото с помощью кнопки или перетащи его сюда</p>
+							<input type="file" name="file" id="file" class="upload-form__input inputfile visually-hidden" data-multiple-caption="{count} files selected" multiple />
+							<label class="upload-form__label" for="file">Выбрать фото</label>
 						</div>
-					</div>
-					<!--Кнопка перехода дальше-->
-					<a class="content__submit" href="event.html" target="_self">Участвовать</a>
+						<!--Контейнер присланного изображения из формы-->
+						<div class="upload-form__wrapper upload-form__wrapper--uploaded"  style="display: none;">
+							<img class="upload-form__image" src="img/uploaded-pic.jpg" alt="Загруженный рисунок" />
+						</div>
+						<!--Форма ввода данных-->
+						<div class="upload-form__details details-form">
+							<ul class="details-form__list">
+								<li class="details-form__item">
+									<label class="details-form__label" for="phone">Номер телефона:</label>
+									<input class="details-form__input visually-hidden" type="tel" name="tel" id="phone"/>
+									<span class="details-form__error details-form__error--required">Это поле должно быть заполнено!</span>
+								</li>
+								<li class="details-form__item details-form__item--personal">
+									<input class="details-form__checkbox details-form__checkbox--personal visually-hidden" type="checkbox" name="agree" id="personal" required checked />
+									<label class="details-form__label details-form__label--checkbox" for="personal">Я согласен на<a class="details-form__label--link" href="#" target="_blank">обработку персональных данных</a></label>
+									<span class="details-form__error details-form__error--required">Это поле должно быть заполнено!</span>
+								</li>
+								<li class="details-form__item details-form__item--policy">
+									<input class="details-form__checkbox details-form__checkbox--agreement visually-hidden" type="checkbox" name="agree" id="agree" required checked />
+									<label class="details-form__label details-form__label--checkbox" for="agree">Я согласен с <a class="details-form__label--link" href="#" target="_blank">условиями проведения конкурсов</a></label>
+									<span class="details-form__error details-form__error--required">Это поле должно быть заполнено!</span>
+								</li>
+							</ul>
+						</div>
+						<!--Кнопка отправки-->
+						<button class="upload-form__submit" type="submit">Отправить</button>
+					</form>
 				</div>
 				<!--Блок с информацией только для десктопов-->
 				<div class="content__right right">
-					<h3 class="right__title">Как участвовать?</h3>
-					<ul class="right__list">
-						<li class="right__item">
-							<b class="right__nr">1</b>
-							<span class="right__text">Сфотографируйся вместе со своей семьёй</span>
-						</li>
-						<li class="right__item">
-							<b class="right__nr">2</b>
-							<span class="right__text">Загрузи фото на сайт</span>
-						</li>
-						<li class="right__item">
-							<b class="right__nr">3</b>
-							<span class="right__text">Жди результаты!</span>
-						</li>
-					</ul>
+					<p class="right__title">Сделай классное фото вместе с семьёй и выиграй портрет от художников &laquo;Моего шумного дома&raquo;!</p>
+					<img class="right__img" src="img/frame-2.svg" alt="Моя семья" />
 				</div>
 			</div>
 		</div>
