@@ -14,7 +14,6 @@
     padding-top: 6px;
     padding-bottom: 6px;
 
-    background-color: #8fd1d8;
     background-image: url('../img/intro-title-bg.png');
     background-repeat: no-repeat;
     background-size: 300px 60px;
@@ -99,21 +98,23 @@
 
   &__submit {
     @include flex-setting(column, center, center, nowrap);
-    @include font-setting($alternate-font, 1.75em, normal, 400, $text-primary);
+    @include font-setting($alternate-font, 1.25em, normal, 400, $text-primary);
 
     display: inline-flex;
 
-    width: 269px;
-    height: 63px;
+    width: 202px;
+    height: 47px;
 
     background-color: transparent;
     background-image: url('../img/submit-btn-bg.png');
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 269px 63px;
+    background-size: 202px 47px;
 
     text-decoration: none;
     text-transform: uppercase;
+
+    border: none;
 
     cursor: pointer;
     outline: none;

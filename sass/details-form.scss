@@ -1,0 +1,116 @@
+.details-form {
+  @include flex-setting(column, flex-start, flex-start, nowrap);
+
+  margin: 0;
+  padding: 15px 15px;
+  list-style: none;
+
+  width: 300px;
+  height: 142px;
+
+  background-image: url('../img/upload-list-bg.png');
+  background-repeat: no-repeat;
+  background-size: 300px 142px;
+  background-position: top center;
+
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+
+  margin-bottom: 10px;
+
+  &__item {
+    @include flex-setting(row, flex-start, center, nowrap);
+
+    width: 100%;
+
+    position: relative;
+
+    &:first-of-type {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__label {
+    @include font-setting($primary-font, 1em, normal, 400, $text-primary);
+
+    margin-bottom: 2px;
+    width: 100%;
+    text-align: left;
+
+    &--checkbox {
+      font-size: 0.65em;
+      margin-bottom: 0;
+    }
+
+    &--link {
+      color: $text-primary;
+      text-decoration: none;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 31px;
+
+    border: none;
+    background-color: transparent;
+
+    background-image: url('../img/upload-input-bg.png');
+    background-position: top center;
+    background-size: 270px 31px;
+
+    box-shadow:0px 0px 5px 1px rgba(0,0,0,0.4)inset;
+    -webkit-box-shadow:0px 0px 5px 1px rgba(0,0,0,0.4)inset;
+    -moz-box-shadow:0px 0px 5px 1px rgba(0,0,0,0.4)inset;
+
+    padding-left: 7px;
+    padding-right: 7px;
+
+    margin-bottom: 15px;
+
+    outline: none;
+    cursor: text;
+
+    @include font-setting($primary-font, 1.125em, normal, 400, $text-primary);
+  }
+
+  &__checkbox + label {
+    @include checkbox-default;
+  }
+
+  &__checkbox--personal + label::before {
+    @include custom-checkbox-1;
+  }
+
+  &__checkbox--agreement + label::before {
+    @include custom-checkbox-2;
+  }
+
+  &__checkbox:checked + label::after {
+    @include checkbox-checked;
+  }
+
+  &__error {
+    @include font-setting($primary-font, 0.5em, normal, 400, $text-error);
+
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+
+    display: none;
+
+    &--personal {
+      bottom: -13px;
+    }
+
+    &--agreement {
+      bottom: -13px;
+    }
+  }
+}

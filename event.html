@@ -15,7 +15,7 @@
 	<![endif]-->
 </head>
 
-<body class="body">
+<body class="body-event">
 	<div class="wrapper">
 		<!--Page header-->
 		<header class="header">
@@ -35,6 +35,7 @@
 						<img class="intro__img" src="img/intro-logo.svg" alt="Мой шумный дом!" />
 					</a>
 				</div>
+				<p class="intro__description">Загрузи фото и оставь номер телефона для связи</p>
 				<!--Меню-->
 				<button class="intro__opener" type="button"></button>
 				<nav class="intro__controls">
@@ -64,35 +65,40 @@
 					<!--Форма загрузки-->
 					<form class="middle__form upload-form" method="post" action="#">
 						<!--Контейнер содержимого формы ДО отправки-->
-						<div class="upload-form__wrapper upload-form__wrapper--choose">
-							<p class="upload-form__description">Выбери фото с помощью кнопки или перетащи его сюда</p>
-							<input type="file" name="file" id="file" class="upload-form__input inputfile visually-hidden" data-multiple-caption="{count} files selected" multiple />
-							<label class="upload-form__label" for="file">Выбрать фото</label>
-						</div>
-						<!--Контейнер присланного изображения из формы-->
-						<div class="upload-form__wrapper upload-form__wrapper--uploaded"  style="display: none;">
-							<img class="upload-form__image" src="img/uploaded-pic.jpg" alt="Загруженный рисунок" />
+
+						<div class="upload-form__photo">
+							<div class="upload-form__body">
+								<!--Элемент с фиолетовым фоном, скрывается после загрузки изображения, добавляется класс --closed -->
+								<div class="upload-form__bg"></div>
+								<p class="upload-form__description">Выбери фото с помощью кнопки или перетащи его сюда</p>
+								<img class="upload-form__img" src="img/photo.jpg" alt="user-photo" />
+							</div>
+
+							<span class="upload-form__btn">
+								<span class="upload-form__label upload-form__label--mobile">Нажми здесь, чтобы выбрать фото</span>
+								<span class="upload-form__label upload-form__label--desktop">Выбрать фото</span>
+								<!-- The file input field used as target for the file upload widget -->
+								<input id="fileupload" type="file" name="files" class="upload-form__upload">
+							</span>
 						</div>
 						<!--Форма ввода данных-->
-						<div class="upload-form__details details-form">
-							<ul class="details-form__list">
-								<li class="details-form__item">
-									<label class="details-form__label" for="phone">Номер телефона:</label>
-									<input class="details-form__input visually-hidden" type="tel" name="tel" id="phone"/>
-									<span class="details-form__error details-form__error--required">Это поле должно быть заполнено!</span>
-								</li>
-								<li class="details-form__item details-form__item--personal">
-									<input class="details-form__checkbox details-form__checkbox--personal visually-hidden" type="checkbox" name="agree" id="personal" required checked />
-									<label class="details-form__label details-form__label--checkbox" for="personal">Я согласен на<a class="details-form__label--link" href="#" target="_blank">обработку персональных данных</a></label>
-									<span class="details-form__error details-form__error--required">Это поле должно быть заполнено!</span>
-								</li>
-								<li class="details-form__item details-form__item--policy">
-									<input class="details-form__checkbox details-form__checkbox--agreement visually-hidden" type="checkbox" name="agree" id="agree" required checked />
-									<label class="details-form__label details-form__label--checkbox" for="agree">Я согласен с <a class="details-form__label--link" href="#" target="_blank">условиями проведения конкурсов</a></label>
-									<span class="details-form__error details-form__error--required">Это поле должно быть заполнено!</span>
-								</li>
-							</ul>
-						</div>
+						<ul class="upload-form__details details-form">
+							<li class="details-form__item">
+								<label class="details-form__label" for="phone">Номер телефона:</label>
+								<input class="details-form__input" type="tel" name="tel" id="phone"/>
+								<span class="details-form__error details-form__error--required">Это поле должно быть заполнено!</span>
+							</li>
+							<li class="details-form__item details-form__item--personal">
+								<input class="details-form__checkbox details-form__checkbox--personal visually-hidden" type="checkbox" name="agree" id="personal" required checked />
+								<label class="details-form__label details-form__label--checkbox" for="personal">Я согласен на<a class="details-form__label--link" href="#" target="_blank">обработку персональных данных</a></label>
+								<span class="details-form__error details-form__error--personal">Это поле должно быть отмечено!</span>
+							</li>
+							<li class="details-form__item details-form__item--policy">
+								<input class="details-form__checkbox details-form__checkbox--agreement visually-hidden" type="checkbox" name="agree" id="agree" required checked />
+								<label class="details-form__label details-form__label--checkbox" for="agree">Я согласен с <a class="details-form__label--link" href="#" target="_blank">условиями проведения конкурсов</a></label>
+								<span class="details-form__error details-form__error--agreement">Это поле должно быть отмечено!</span>
+							</li>
+						</ul>
 						<!--Кнопка отправки-->
 						<button class="upload-form__submit" type="submit">Отправить</button>
 					</form>
@@ -155,12 +161,29 @@
 		<div class="popup-prize__wrapper">
 			<button class="popup-prize__close" type="button"></button>
 			<div class="popup-prize__body">
-				<img class="popup-prize__img" src="img/prize.svg" alt="Моя семья!" />
+				<img class="popup-prize__img" src="img/prize-bg.png" alt="Моя семья!" />
 				<p class="popup-prize__description">Выиграй семейный портрет от создателей «Моего шумного дома» в фирменном стиле шоу – оригинал на бумаге и цифровую версию!</p>
 			</div>
 		</div>
 	</div>
-
+	<!--Попап успеха-->
+	<div class="popup-success" style="display: none;">
+		<div class="popup-success__wrapper">
+			<button class="popup-success__close" type="button"></button>
+			<div class="popup-success__body">
+				<h3 class="popup-success__title"><span>Отлично! Жди&nbsp;результаты&nbsp;1&nbsp;июля.</span></h3>
+			</div>
+		</div>
+	</div>
+	<!--Попап неуспеха-->
+	<div class="popup-mistake" style="display: none;">
+		<div class="popup-mistake__wrapper">
+			<button class="popup-mistake__close" type="button"></button>
+			<div class="popup-mistake__body">
+				<p class="popup-mistake__description">Ой,&nbsp;кажется,&nbsp;ты&nbsp;ещё не&nbsp;загрузил&nbsp;фото!</p>
+			</div>
+		</div>
+	</div>
 	<script src="js/script.js"></script>
 </body>
 
