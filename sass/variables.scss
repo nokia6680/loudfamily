@@ -9,45 +9,20 @@ $widebook-sm: 1440px;
 $widebook: 1600px;
 $widebook-hd: 1920px;
 
-$bg-body: #c0c0c0;
-$bg-footer: #231f20;
-
-$text-black: #000000;
-$text-lightblack: #231f20;
-$text-white: #ffffff;
-$text-mail: #b3b3b3;
-$text-gray: #3b3b3b;
-$text-yellow: #ffca28;
-$text-lightgray: #8c8d8d;
-$text-mediumgray: #979797;
-$text-darkgray: #242424;
-$text-orange: #ef820d;
-$text-error: #f44336;
-$text-footer: #838383;
-
-$howto-btn-bg: #f48fb1;
-$prize-btn-bg: #ffca28;
-$submit-btn-bg: #aeea00;
-$btn-closer: #f44336;
-
-$input-border: #78909c;
-$input-label: #78909c;
+$text-primary: #000000;
 
 $social-hover: #ff6700;
 
-$link-hover-bg: #ff6700;
-$link-hover-text: #ffffff;
+$bg-body: #cacaca;
+$bg-header: #ff6700;
+$bg-footer: #19181c;
 
-$thin-font: "Oswald-ExtraLight", sans-serif;
-$light-font: "Oswald-Light", sans-serif;
-$regular-font: "Oswald-Regular", sans-serif;
-$medium-font: "Oswald-Medium", sans-serif;
-$bold-font: "Oswald-Bold", sans-serif;
-$semibold-font: "Oswald-SemiBold", sans-serif;
+$primary-font: "Gagalin-Regular", sans-serif;
+$alternate-font: "Peace Sans", sans-serif;
 
 $base-font-color: #000;
 $base-font-size: 16px;
 $base-font-weight: normal;
 
-$baseFontColor: $text-black;
-$baseFontFamily: $regular-font;
+$baseFontColor: $text-primary;
+$baseFontFamily: $primary-font;

@@ -64,7 +64,7 @@
   left: 0;
 
   background-color: transparent;
-  border: 2px solid $input-border;
+  border: 2px solid #000;
 
   @media only screen and (min-width: $tablet) {
     bottom: -4px;
@@ -96,49 +96,6 @@
   }
 }
 
-@mixin radio-default {
-  display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
-
-  position: relative;
-  padding-left: 35px;
-}
-
-@mixin custom-radio {
-  position: absolute;
-  content: "";
-  display: block;
-
-  width: 25px;
-  height: 25px;
-
-  bottom: 0;
-  left: 0;
-
-  background-color: #78909c;
-  border: 2px solid #000000;
-  border-radius: 50%;
-
-  box-shadow:0px 0px 20px 1px rgba(0,0,0,0.21)inset;
-  -webkit-box-shadow:0px 0px 20px 1px rgba(0,0,0,0.21)inset;
-  -moz-box-shadow:0px 0px 20px 1px rgba(0,0,0,0.21)inset;
-}
-
-@mixin radio-checked {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 5px;
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 0px 1px rgba(0,0,0,1), 0px 0px 0px 3px rgba(173,233,0,1);
-  border-radius: 50%;
-  border: 2px solid #000000;
-}
-
 @mixin soft-animation {
   transition-property: initial;
   transition-duration: 0.2s;
@@ -159,4 +116,20 @@
     from { opacity: 0; }
     to { opacity: 1 }
   }
+}
+
+@mixin font-setting($family, $size, $line-height, $font-width, $color) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $font-width;
+  color: $color;
+}
+
+@mixin flex-setting($direction, $justify, $align, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
 }

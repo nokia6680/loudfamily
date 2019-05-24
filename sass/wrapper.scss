@@ -1,8 +1,4 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
+  @include flex-setting(column, flex-start, flex-start, nowrap);
   min-height: 100vh;
 }

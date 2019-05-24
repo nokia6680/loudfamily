@@ -1,0 +1,106 @@
+.nav-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include flex-setting(column, flex-start, center, nowrap);
+
+  &__item {
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    &--howto {
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 100%;
+        height: 3px;
+
+        top: 0;
+        left: 0;
+
+        background-image: url('../img/menu-item-1.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+      }
+    }
+
+    &--prize {
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 100%;
+        height: 3px;
+
+        top: 0;
+        left: 0;
+
+        background-image: url('../img/menu-item-2.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+      }
+    }
+
+    &--rules {
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 100%;
+        height: 3px;
+
+        bottom: -1px;
+        left: 0;
+
+        background-image: url('../img/menu-item-4.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 100%;
+        height: 3px;
+
+        top: 0;
+        left: 0;
+
+        background-image: url('../img/menu-item-3.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__link {
+    @include font-setting($alternate-font, 1em, normal, 400, $text-primary);
+    @include flex-setting(column, center, center, nowrap);
+
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 12px;
+    padding-bottom: 10px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &:hover,
+    &:active {
+      color: $social-hover;
+    }
+  }
+}

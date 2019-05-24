@@ -1,0 +1,125 @@
+.middle {
+  @include flex-setting(column, flex-start, center, nowrap);
+
+  width: 100%;
+
+  &__description {
+    @include font-setting($primary-font, 0.65em, normal, 400, $text-primary);
+    @include flex-setting(column, center, center, nowrap);
+
+    display: inline-flex;
+
+    text-align: center;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    background-color: #8fd1d8;
+    background-image: url('../img/intro-title-bg.png');
+    background-repeat: no-repeat;
+    background-size: 300px 60px;
+
+    width: 300px;
+
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 70px;
+      height: 73px;
+
+      background-image: url('../img/index-left-small.svg');
+      background-size: 70px auto;
+      background-repeat: no-repeat;
+
+      top: -60px;
+      left: 110px;
+
+      z-index: -2;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 80px;
+      height: 96px;
+
+      background-image: url('../img/index-right-small.svg');
+      background-size: 80px auto;
+      background-repeat: no-repeat;
+
+      top: -90px;
+      right: 45px;
+
+      z-index: -2;
+    }
+  }
+
+  &__play {
+    height: 175px;
+    width: 300px;
+
+    margin-bottom: 50px;
+
+    overflow: hidden;
+
+    background-image: url('../img/video-bg.png');
+    background-repeat: no-repeat;
+    background-size: 300px 175px;
+    background-position: top center;
+
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+
+    z-index: auto;
+
+    position: relative;
+  }
+
+
+  &__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 280px;
+    height: 155px;
+    z-index: 0;
+  }
+
+  &__submit {
+    @include flex-setting(column, center, center, nowrap);
+    @include font-setting($alternate-font, 1.75em, normal, 400, $text-primary);
+
+    display: inline-flex;
+
+    width: 269px;
+    height: 63px;
+
+    background-color: transparent;
+    background-image: url('../img/submit-btn-bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 269px 63px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    outline: none;
+
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+  }
+}
