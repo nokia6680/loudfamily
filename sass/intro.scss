@@ -7,6 +7,12 @@
   padding-left: 10px;
   padding-right: 10px;
 
+  margin-bottom: 10px;
+
+  &--event {
+    margin-bottom: 0;
+  }
+
   @include flex-setting(row, space-between, flex-start, nowrap);
 
   &__logo {
@@ -26,30 +32,29 @@
 
   /*Для страницы EVENT - mobile*/
   &__description {
-    @include font-setting($primary-font, 0.625em, normal, 400, $text-primary);
     @include flex-setting(column, center, center, nowrap);
-
     display: inline-flex;
-
-    text-align: center;
 
     padding-top: 6px;
     padding-bottom: 6px;
 
     background-image: url('../img/intro-description-bg.png');
     background-repeat: no-repeat;
-    background-size: 145px auto;
+    background-size: 145px 42px;
 
     width: 145px;
+    height: 42px;
 
-    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
-
-    margin-bottom: 15px;
+    margin-bottom: 1px;
     margin-top: 30px;
 
     position: relative;
+
+    span {
+      @include font-setting($primary-font, 0.5em, normal, 400, $text-primary);
+      text-align: center;
+      transform: rotate(1.5deg);
+    }
   }
 
   &__opener {
@@ -139,6 +144,189 @@
       box-shadow:0px 5px 0px 0px rgba(0,0,0,0.35)inset;
       -webkit-box-shadow:0px 5px 0px 0px rgba(0,0,0,0.35)inset;
       -moz-box-shadow:0px 5px 0px 0px rgba(0,0,0,0.35)inset;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .intro {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    margin-bottom: 20px;
+
+    &--event {
+      margin-bottom: 0;
+    }
+
+    &__logo {
+      width: 134px;
+      height: 81px;
+    }
+
+    /*Для страницы EVENT - mobile*/
+    &__description {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      background-size: 155px 44px;
+
+      width: 155px;
+      height: 44px;
+
+      margin-bottom: 5px;
+      margin-top: 45px;
+
+      span {
+        font-size: 0.575em;
+      }
+    }
+
+    &__opener {
+      width: 50px;
+      height: 50px;
+
+      background-size: 50px 50px;
+    }
+
+    &__closer {
+      width: 50px;
+      height: 50px;
+
+      top: 10px;
+      right: 20px;
+
+      background-size: 50px 50px;
+    }
+
+    &__controls {
+      &--active {
+        padding-top: 65px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .intro {
+    margin-bottom: 40px;
+
+    &--event {
+      margin-bottom: 40px;
+    }
+
+    &__logo {
+      width: 150px;
+      height: 91px;
+    }
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .intro {
+    padding-top: 20px;
+    margin-bottom: 20px;
+
+    &--event {
+      margin-bottom: 10px;
+    }
+
+    &__logo {
+      width: 206px;
+      height: 125px;
+    }
+
+    /*Для страницы EVENT - mobile*/
+    &__description {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      background-size: 250px 72px;
+
+      width: 250px;
+      height: 72px;
+
+      margin-top: 45px;
+
+      span {
+        font-size: 0.875em;
+      }
+    }
+
+    &__opener {
+      width: 77px;
+      height: 77px;
+
+      background-size: 77px 77px;
+    }
+
+    &__closer {
+      width: 77px;
+      height: 77px;
+
+      background-size: 77px 77px;
+
+      top: 20px;
+      right: 20px;
+    }
+
+    &__controls {
+      top: -600px;
+
+      &--active {
+        top: 0;
+        padding-top: 105px;
+
+        box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.35)inset;
+        -webkit-box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.35)inset;
+        -moz-box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.35)inset;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .intro {
+    &__logo {
+      width: 275px;
+      height: 167px;
+    }
+
+    /*Для страницы EVENT - mobile*/
+    &__description {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      background-size: 314px 90px;
+
+      width: 314px;
+      height: 90px;
+
+      margin-top: 65px;
+
+      span {
+        font-size: 1.25em;
+      }
+    }
+
+    &__opener {
+      width: 87px;
+      height: 87px;
+
+      background-size: 87px 87px;
+    }
+
+    &__closer {
+      width: 87px;
+      height: 87px;
+
+      background-size: 87px 87px;
+    }
+
+    &__controls {
+      &--active {
+        padding-top: 125px;
+      }
     }
   }
 }

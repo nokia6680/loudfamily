@@ -2,9 +2,15 @@
   width: 100%;
 
   @include flex-setting(column, center, center, nowrap);
-  
+
   margin-bottom: 0;
   margin-top: auto;
 
   background-color: $bg-footer;
+}
+
+@media only screen and (min-width: $smt) {
+  .footer {
+    align-items: flex-end;
+  }
 }

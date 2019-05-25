@@ -95,3 +95,50 @@
     }
   }
 }
+
+@media only screen and (min-width: $smt) {
+  .social-list {
+    width: auto;
+
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    margin-left: auto;
+    margin-right: 30px;
+
+    &__item {
+      width: 31px;
+      height: 31px;
+
+      &:not(:last-of-type) {
+        margin-right: 13px;
+      }
+    }
+
+    &__link {
+      .fa-youtube::before {
+        font-size: 1.25em;
+      }
+
+      .fa-facebook-f::before {
+        font-size: 1.25em;
+      }
+
+      .fa-vk::before {
+        font-size: 1.25em;
+      }
+
+      .fa-twitter::before {
+        font-size: 1.25em;
+      }
+
+      .fa-instagram::before {
+        font-size: 1.25em;
+      }
+
+      .fa-odnoklassniki::before {
+        font-size: 1.25em;
+      }
+    }
+  }
+}

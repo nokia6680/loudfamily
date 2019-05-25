@@ -28,14 +28,14 @@
 		<!--Page main part-->
 		<main class="main">
 			<!--Верхняя часть intro-->
-			<div class="main__intro intro">
+			<div class="main__intro intro intro--event">
 				<!--Лого шоу-->
 				<div class="intro__logo">
 					<a class="intro__link" href="index.html" target="_self">
 						<img class="intro__img" src="img/intro-logo.svg" alt="Мой шумный дом!" />
 					</a>
 				</div>
-				<p class="intro__description">Загрузи фото и оставь номер телефона для связи</p>
+				<h3 class="intro__description"><span>Загрузи фото и оставь номер телефона для связи</span></h3>
 				<!--Меню-->
 				<button class="intro__opener" type="button"></button>
 				<nav class="intro__controls">
@@ -65,10 +65,9 @@
 					<!--Форма загрузки-->
 					<form class="middle__form upload-form" method="post" action="#">
 						<!--Контейнер содержимого формы ДО отправки-->
-
 						<div class="upload-form__photo">
 							<div class="upload-form__body">
-								<!--Элемент с фиолетовым фоном, скрывается после загрузки изображения, добавляется класс --closed -->
+								<!--скрывается после загрузки изображения, добавляется класс --closed -->
 								<div class="upload-form__bg"></div>
 								<p class="upload-form__description">Выбери фото с помощью кнопки или перетащи его сюда</p>
 								<img class="upload-form__img" src="img/photo.jpg" alt="user-photo" />

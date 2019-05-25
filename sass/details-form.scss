@@ -13,9 +13,9 @@
   background-size: 300px 142px;
   background-position: top center;
 
-  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
 
   margin-bottom: 10px;
 
@@ -63,6 +63,7 @@
 
     background-image: url('../img/upload-input-bg.png');
     background-position: top center;
+    background-repeat: no-repeat;
     background-size: 270px 31px;
 
     box-shadow:0px 0px 5px 1px rgba(0,0,0,0.4)inset;
@@ -111,6 +112,127 @@
 
     &--agreement {
       bottom: -13px;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .details-form {
+    width: 335px;
+    height: 159px;
+
+    background-size: 335px 159px;
+
+    margin-bottom: 15px;
+
+    &__label {
+      &--checkbox {
+        font-size: 0.75em;
+      }
+    }
+
+    &__input {
+      height: 35px;
+      background-position: top center;
+      background-size: 305px 35px;
+
+      font-size: 1.25em;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .details-form {
+    width: 374px;
+    height: 178px;
+
+    background-size: 374px 178px;
+
+    margin-bottom: 25px;
+
+    &__label {
+      font-size: 1.125em;
+
+      &--checkbox {
+        font-size: 0.875em;
+      }
+    }
+
+    &__input {
+      height: 39px;
+      background-size: 344px 39px;
+
+      font-size: 1.375em;
+
+      margin-bottom: 25px;
+    }
+
+    &__error {
+      font-size: 0.625em;
+
+      bottom: 10px;
+
+      &--personal {
+        bottom: -13px;
+      }
+
+      &--agreement {
+        bottom: -13px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .details-form {
+    width: 429px;
+    height: 202px;
+
+    background-size: 429px 202px;
+
+    margin-bottom: 18px;
+
+    padding-left: 22px;
+    padding-right: 22px;
+
+    &__item {
+      &:nth-of-type(2) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &__label {
+      font-size: 1.188em;
+
+      &--checkbox {
+        font-size: 0.938em;
+      }
+    }
+
+    &__input {
+      height: 44px;
+      background-size: 384px 44px;
+
+      font-size: 1.75em;
+
+      margin-bottom: 25px;
+
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__error {
+      font-size: 0.75em;
+
+      bottom: 10px;
+
+      &--personal {
+        bottom: -16px;
+      }
+
+      &--agreement {
+        bottom: -16px;
+      }
     }
   }
 }

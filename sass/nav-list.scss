@@ -27,7 +27,7 @@
         background-image: url('../img/menu-item-1.png');
         background-repeat: no-repeat;
         background-position: left center;
-        background-size: contain;
+        background-size: cover;
       }
     }
 
@@ -45,7 +45,7 @@
         background-image: url('../img/menu-item-2.png');
         background-repeat: no-repeat;
         background-position: left center;
-        background-size: contain;
+        background-size: cover;
       }
     }
 
@@ -64,7 +64,7 @@
         background-image: url('../img/menu-item-4.png');
         background-repeat: no-repeat;
         background-position: left center;
-        background-size: contain;
+        background-size: cover;
       }
       &::after {
         position: absolute;
@@ -79,7 +79,7 @@
         background-image: url('../img/menu-item-3.png');
         background-repeat: no-repeat;
         background-position: left center;
-        background-size: contain;
+        background-size: cover;
       }
     }
   }
@@ -103,6 +103,37 @@
     &:hover,
     &:active {
       color: $social-hover;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .nav-list {
+    &__link {
+      font-size: 1.125em;
+
+      padding-top: 14px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .nav-list {
+    &__link {
+      font-size: 3em;
+
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .nav-list {
+    &__link {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }

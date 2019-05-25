@@ -46,23 +46,38 @@
   &__body {
     @include flex-setting(column, center, center, nowrap);
 
-    width: 279px;
-    height: 132px;
+    width: 100%;
+    height: 100%;
 
     background-image: url('../img/popup-mistake-bg.png');
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 279px 132px;
+    background-size: cover;
 
     position: relative;
 
     overflow: hidden;
 
-    z-index: 1001;
+    z-index: -1;
   }
 
   &__description {
     @include font-setting($primary-font, 1.25em, normal,400, $text-primary);
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .popup-mistake {
+    &__wrapper {
+      width: 411px;
+      height: 181px;
+
+      background-size: 411px 181px;
+    }
+
+    &__description {
+      font-size: 1.875em;
+    }
   }
 }

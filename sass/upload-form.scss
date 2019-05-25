@@ -45,7 +45,7 @@
 
     background-color: #579f9c;
 
-    z-index: 3;
+    z-index: -1;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -156,5 +156,107 @@
     box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .upload-form {
+    /*ФОРМА ЗАГРУЗКИ ФОТО*/
+    &__photo {
+      width: 335px;
+      height: 220px;
+
+      background-size: 335px auto;
+
+      padding: 10px 10px;
+      margin-bottom: 15px;
+    }
+
+    &__btn {
+      width: 310px;
+      height: 198px;
+    }
+
+    &__label {
+      font-size: 1.375em;
+
+      width: 250px;
+
+      padding-top: 100px;
+
+      &::after {
+        background-size: 120px 112px;
+
+        width: 120px;
+        height: 112px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .upload-form {
+    /*ФОРМА ЗАГРУЗКИ ФОТО*/
+    &__photo {
+      width: 374px;
+      height: 246px;
+
+      background-size: 374px auto;
+
+      padding: 13px 13px;
+      margin-bottom: 25px;
+    }
+
+    &__btn {
+      width: 350px;
+      height: 220px;
+    }
+
+    &__label {
+      font-size: 1.5em;
+
+      width: 300px;
+    }
+
+    &__submit {
+      font-size: 1.75em;
+
+      width: 269px;
+      height: 63px;
+
+      background-size: 269px 63px;
+    }
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .upload-form {
+    /*ФОРМА ЗАГРУЗКИ ФОТО*/
+    &__photo {
+      width: 429px;
+      height: 282px;
+
+      background-size: 429px auto;
+
+      padding: 13px 13px;
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      width: 406px;
+      height: 255px;
+    }
+
+    &__label {
+      font-size: 1.75em;
+
+      width: 380px;
+
+      padding-top: 150px;
+
+      &::after {
+        top: 20px;
+      }
+    }
   }
 }
