@@ -109,6 +109,8 @@
     width: 202px;
     height: 47px;
 
+    margin-bottom: 5px;
+
     background-color: transparent;
     background-image: url('../img/submit-btn-bg.png');
     background-repeat: no-repeat;
@@ -289,6 +291,7 @@
         z-index: -1;
       }
     }
+
     &__description {
       padding-top: 8px;
       padding-bottom: 8px;
@@ -404,6 +407,61 @@
     &__video {
       width: 552px;
       height: 303px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .middle {
+    width: 50%;
+
+    &__description {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      background-size: 398px 80px;
+
+      width: 398px;
+      height: 80px;
+
+      margin-bottom: 15px;
+      margin-top: 0;
+
+      span {
+        width: 375px;
+        font-size: 0.875em;
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__play {
+      width: 408px;
+      height: 236px;
+
+      background-size: 408px 236px;
+    }
+
+    &__video {
+      width: 380px;
+      height: 208px;
+    }
+
+    /*Для EVENT*/
+
+    &--event {
+      width: 33%;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
     }
   }
 }

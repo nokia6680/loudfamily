@@ -260,3 +260,86 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .upload-form {
+    /*ФОРМА ЗАГРУЗКИ ФОТО*/
+    &__photo {
+      width: 292px;
+      height: 192px;
+
+      background-size: 292px auto;
+
+      padding: 9px 9px;
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      width: 276px;
+      height: 178px;
+
+      justify-content: flex-end;
+
+      padding-bottom: 15px;
+    }
+
+    &__description {
+      @include font-setting($primary-font, 0.875em, normal, 400, $text-form);
+
+      display: inline-flex;
+      text-align: center;
+
+      position: relative;
+
+      padding-top: 80px;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        background-image: url('../img/upload-icon.svg');
+        background-repeat: no-repeat;
+        background-size: 90px 82px;
+        background-position: top center;
+
+        width: 90px;
+        height: 82px;
+
+        top: -5px;
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
+    }
+
+    &__label {
+      font-size: 1.75em;
+
+      width: 380px;
+
+      padding-top: 150px;
+
+      &::after {
+       display: none;
+      }
+
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        @include flex-setting(column, center, center, nowrap);
+        @include font-setting($alternate-font, 0.65em, normal, 400, $text-primary);
+
+        width: 124px;
+        height: 27px;
+
+        background-image: url('../img/form-btn-bg.png');
+        background-size: 124px 27px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding: 0;
+      }
+    }
+  }
+}

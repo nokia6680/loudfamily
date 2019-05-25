@@ -14,3 +14,9 @@
     align-items: flex-end;
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .footer {
+    position: relative;
+  }
+}

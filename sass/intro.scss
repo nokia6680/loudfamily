@@ -141,9 +141,9 @@
 
       transition: 0.2s ease-in-out;
 
-      box-shadow:0px 5px 0px 0px rgba(0,0,0,0.35)inset;
-      -webkit-box-shadow:0px 5px 0px 0px rgba(0,0,0,0.35)inset;
-      -moz-box-shadow:0px 5px 0px 0px rgba(0,0,0,0.35)inset;
+      box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.35)inset;
+      -webkit-box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.35)inset;
+      -moz-box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.35)inset;
     }
   }
 }
@@ -327,6 +327,39 @@
       &--active {
         padding-top: 125px;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .intro {
+    &__logo {
+      width: 220px;
+      height: 134px;
+    }
+
+    &__opener,
+    &__closer {
+      display: none;
+    }
+
+    &__controls {
+      position: relative;
+      top: auto;
+      left: auto;
+
+      padding-top: 0;
+
+      width: auto;
+
+      background-image: none;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    /*Для страницы EVENT - mobile*/
+    &__description {
+      display: none;
     }
   }
 }

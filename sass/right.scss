@@ -1,3 +1,169 @@
 .right {
   display: none;
 }
+
+@media only screen and (min-width: $laptop) {
+  .right {
+    @include flex-setting(column,flex-start, center, nowrap);
+    width: 25%;
+
+    padding-top: 3%;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 177px;
+      height: 260px;
+
+      background-size: 177px auto;
+
+      background-image: url('../img/char-2.svg');
+      background-repeat: no-repeat;
+
+      bottom: -25px;
+      right: -5px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 134px;
+      height: 176px;
+
+      background-size: 136px auto;
+      background-image: url('../img/char-1.svg');
+      background-repeat: no-repeat;
+
+      bottom: -25px;
+      right: 125px;
+    }
+
+    &__title {
+      @include font-setting($primary-font, 1.25em, normal, 400, $text-primary);
+      display: inline-flex;
+
+      text-align: center;
+      transform: rotate(-2deg);
+      margin-top: 5px;
+      margin-bottom: -5px;
+    }
+
+    &__list {
+      @include flex-setting(column, flex-start, center, nowrap);
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      padding-top: 25px;
+
+      width: 240px;
+      height: 193px;
+
+      background-image: url('../img/popup-rules-list.png');
+      background-size: 240px 193px;
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+
+    &__item {
+      width: 200px;
+      transform: rotate(-2deg);
+
+      @include flex-setting(row, flex-start, center, nowrap);
+
+      &:nth-of-type(2) {
+        padding-left: 10px;
+      }
+    }
+
+    &__nr {
+      @include font-setting($primary-font, 1.125em, normal, 400, $text-primary);
+      @include flex-setting(column, center, center, nowrap);
+
+      border-radius: 50%;
+      margin-right: 5px;
+
+      background-color: #b7dfe4;
+
+      &:nth-of-type(1) {
+        min-width: 25px;
+        height: 25px;
+
+        background-image: url('../img/popup-rules-item-1.png');
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+      }
+
+      &:nth-of-type(2) {
+        min-width: 28px;
+        height: 28px;
+
+        background-image: url('../img/popup-rules-item-2.png');
+        background-size: 28px 28px;
+        background-repeat: no-repeat;
+      }
+
+      &:nth-of-type(3) {
+        min-width: 27px;
+        height: 27px;
+
+        background-image: url('../img/popup-rules-item-3.png');
+        background-size: 27px 27px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__text {
+      @include font-setting($primary-font, 0.75em, normal, 400, $text-primary);
+    }
+
+    /*Для EVENT*/
+
+    &--event {
+      width: 33%;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__description {
+      width: 275px;
+      height: 75px;
+
+      background-image: url('../img/right-description-bg.png');
+      background-size: 275px 75px;
+      background-position: top center;
+      background-repeat: no-repeat;
+
+      margin-bottom: 30px;
+
+      span {
+        @include font-setting($primary-font, 0.875em, normal, 400, $text-primary);
+        display: inline-flex;
+
+        text-align: center;
+        width: 265px;
+
+        transform: rotate(1.5deg);
+
+        padding-top: 10px;
+        padding-left: 4px;
+      }
+    }
+
+    &__img {
+      width: 270px;
+      height: 227px;
+    }
+  }
+}

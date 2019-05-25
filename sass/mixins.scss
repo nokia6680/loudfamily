@@ -50,6 +50,10 @@
   @media only screen and (min-width: $smt) {
     padding-left: 35px;
   }
+
+  @media only screen and (min-width: $laptop) {
+    padding-left: 20px;
+  }
 }
 
 @mixin custom-checkbox-1 {
@@ -79,6 +83,12 @@
     bottom: -4px;
 
     background-size: 27px 28px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
   }
 }
 
@@ -110,6 +120,12 @@
 
     background-size: 27px 28px;
   }
+
+  @media only screen and (min-width: $laptop) {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+  }
 }
 
 @mixin checkbox-checked {
@@ -133,6 +149,13 @@
     height: 27px;
 
     background-size: 33px 27px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    width: 18px;
+    height: 15px;
+    background-size: 18px 15px;
+    top: -2px;
   }
 }
 

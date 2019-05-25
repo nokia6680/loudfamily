@@ -6,3 +6,17 @@
     z-index: -1;
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+
+    margin-top: -60px;
+
+    &--active {
+      z-index: -1;
+    }
+  }
+}
