@@ -95,7 +95,7 @@
     }
 
     &__description {
-      background-size: 325px 200px;
+      background-size: contain;
 
       width: 325px;
       height: 200px;
@@ -104,6 +104,40 @@
         font-size: 1.103em;
         margin-top: -45px;
         transform: rotate(-1deg);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .left {
+    &__img {
+      width: 396px;
+      height: 438px;
+    }
+
+    /*Для EVENT*/
+
+    &--event {
+      padding-top: 100px;
+      padding-bottom: 0;
+
+      &::before {
+        width: 456px;
+        height: 762px;
+
+        bottom: -360px;
+        left: 10px;
+      }
+    }
+
+    &__description {
+      width: 423px;
+      height: 261px;
+
+      span {
+        font-size: 1.438em;
+        margin-top: -55px;
       }
     }
   }

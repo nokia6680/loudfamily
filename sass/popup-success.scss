@@ -159,3 +159,37 @@
     }
   }
 }
+
+@media only screen and (min-width: $widebook-hd) {
+  .popup-success {
+    &__wrapper {
+      width: 423px;
+      height: 363px;
+
+      background-size: contain;
+    }
+
+    &__body {
+      &::before {
+        width: 193px;
+        height: 315px;
+
+        background-size: contain;
+
+        bottom: -90px;
+        left: 120px;
+      }
+    }
+
+    &__title {
+      background-size: contain;
+
+      width: 348px;
+      height: 90px;
+
+      span {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

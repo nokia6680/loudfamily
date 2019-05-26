@@ -340,7 +340,7 @@
       height: 134px;
 
       padding-top: 20px;
-
+      z-index: 10;
     }
 
     &__opener,
@@ -374,6 +374,17 @@
     &__logo {
       width: 293px;
       height: 178px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .intro {
+    &__logo {
+      width: 362px;
+      height: 220px;
+
+      padding-top: 15px;
     }
   }
 }

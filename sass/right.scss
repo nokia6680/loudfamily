@@ -272,3 +272,108 @@
     }
   }
 }
+
+@media only screen and (min-width: $widebook-hd) {
+  .right {
+    padding-top: 3%;
+
+    &::before {
+      width: 308px;
+      height: 446px;
+
+      background-size: 308px auto;
+
+      bottom: -85px;
+      right: -10px;
+    }
+
+    &::after {
+      width: 206px;
+      height: 270px;
+
+      background-size: 206px auto;
+
+      bottom: -70px;
+      right: 200px;
+    }
+
+    &__title {
+      font-size: 1.779em;
+      margin-top: 5px;
+      margin-bottom: -5px;
+    }
+
+    &__list {
+      padding-top: 35px;
+      padding-left: 10px;
+
+      width: 406px;
+      height: 332px;
+
+      background-size: cover;
+    }
+
+    &__item {
+      width: 340px;
+      margin-bottom: 10px;
+
+      &:nth-of-type(2) {
+        padding-left: 15px;
+      }
+    }
+
+    &__nr {
+      font-size: 1.98em;
+      margin-right: 10px;
+
+      &:nth-of-type(1) {
+        min-width: 41px;
+        height: 40px;
+
+        background-size: 41px 40px;
+      }
+
+      &:nth-of-type(2) {
+        min-width: 45px;
+        height: 45px;
+
+        background-size: 45px 45px;
+      }
+
+      &:nth-of-type(3) {
+        min-width: 44px;
+        height: 45px;
+
+        background-size: 44px 45px;
+      }
+    }
+
+    &__text {
+      font-size: 1.438em;
+    }
+
+    /*Для EVENT*/
+
+    &__description {
+      width: 480px;
+      height: 131px;
+
+      background-size: cover;
+
+      margin-bottom: 30px;
+
+      span {
+        font-size: 1.438em;
+        width: 440px;
+
+        padding-top: 20px;
+        padding-left: 20px;
+      }
+    }
+
+    &__img {
+      width: 502px;
+      height: 423px;
+    }
+  }
+}

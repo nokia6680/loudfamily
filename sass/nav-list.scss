@@ -220,3 +220,29 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-hd) {
+  .nav-list {
+    &__item {
+      &--prize {
+        background-size: cover;
+
+        width: 156px;
+        height: 60px;
+
+        margin-right: 27px;
+      }
+
+      &--rules {
+        background-size: cover;
+
+        width: 193px;
+        height: 60px;
+      }
+    }
+
+    &__link {
+      font-size: 1.661em;
+    }
+  }
+}

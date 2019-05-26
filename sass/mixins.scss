@@ -37,9 +37,9 @@
 
   @media only screen and (min-width: $widebook-hd) {
     width: 100%;
-    max-width: 100%;
+    max-width: 1530px;
     margin: 0 auto;
-    padding: 0 95px;
+    padding: 0;
   }
 }
 
@@ -61,6 +61,10 @@
 
   @media only screen and (min-width: $laptop-hd) {
     padding-left: 30px;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    padding-left: 38px;
   }
 }
 
@@ -99,9 +103,15 @@
     background-size: 18px 18px;
   }
 
-  @media only screen and (min-width: $laptop) {
+  @media only screen and (min-width: $laptop-hd) {
     width: 23px;
     height: 24px;
+    background-size: contain;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    width: 30px;
+    height: 31px;
     background-size: contain;
   }
 }
@@ -141,9 +151,15 @@
     background-size: 18px 18px;
   }
 
-  @media only screen and (min-width: $laptop) {
+  @media only screen and (min-width: $laptop-hd) {
     width: 23px;
     height: 24px;
+    background-size: contain;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    width: 30px;
+    height: 31px;
     background-size: contain;
   }
 }
@@ -178,11 +194,18 @@
     top: -2px;
   }
 
-  @media only screen and (min-width: $laptop) {
+  @media only screen and (min-width: $laptop-hd) {
     width: 28px;
     height: 24px;
     background-size: contain;
     top: -4px;
+  }
+
+  @media only screen and (min-width: $widebook-hd) {
+    width: 37px;
+    height: 30px;
+    background-size: contain;
+    top: -10px;
   }
 }
 

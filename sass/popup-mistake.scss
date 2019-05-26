@@ -94,3 +94,18 @@
     }
   }
 }
+
+@media only screen and (min-width: $widebook-hd) {
+  .popup-mistake {
+    &__wrapper {
+      width: 411px;
+      height: 181px;
+
+      background-size: contain;
+    }
+
+    &__description {
+      font-size: 1.875em;
+    }
+  }
+}

@@ -490,7 +490,7 @@
       width: 544px;
       height: 314px;
 
-      background-size: 544px 314px;
+      background-size: cover;
     }
 
     &__video {
@@ -503,6 +503,44 @@
       height: 47px;
       background-size: 204px 47px;
       font-size: 1.334em;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .middle {
+    &__description {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      background-size: cover;
+
+      width: 696px;
+      height: 139px;
+
+      margin-bottom: 23px;
+
+      span {
+        width: 655px;
+        font-size: 1.438em;
+      }
+    }
+
+    &__play {
+      width: 714px;
+      height: 413px;
+    }
+
+    &__video {
+      width: 666px;
+      height: 366px;
+    }
+
+    &__submit {
+      width: 269px;
+      height: 63px;
+      background-size: cover;
+      font-size: 1.75em;
     }
   }
 }
