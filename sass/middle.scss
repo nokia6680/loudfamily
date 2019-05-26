@@ -465,3 +465,44 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-hd) {
+  .middle {
+    &__description {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      background-size: 530px 106px;
+
+      width: 530px;
+      height: 106px;
+
+      margin-bottom: 15px;
+      margin-top: 0;
+
+      span {
+        width: 498px;
+        font-size: 1.096em;
+      }
+    }
+
+    &__play {
+      width: 544px;
+      height: 314px;
+
+      background-size: 544px 314px;
+    }
+
+    &__video {
+      width: 508px;
+      height: 278px;
+    }
+
+    &__submit {
+      width: 204px;
+      height: 47px;
+      background-size: 204px 47px;
+      font-size: 1.334em;
+    }
+  }
+}

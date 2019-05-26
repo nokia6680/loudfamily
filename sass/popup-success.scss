@@ -103,7 +103,7 @@
       width: 423px;
       height: 363px;
 
-      background-size: 423px 363px;
+      background-size: contain;
     }
 
     &__body {
@@ -111,7 +111,7 @@
         width: 193px;
         height: 315px;
 
-        background-size: 193px auto;
+        background-size: contain;
 
         bottom: -90px;
         left: 120px;
@@ -119,13 +119,42 @@
     }
 
     &__title {
-      background-size: 348px 90px;
+      background-size: contain;
 
       width: 348px;
       height: 90px;
 
       span {
         font-size: 1.5em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .popup-success {
+    &__wrapper {
+      width: 301px;
+      height: 259px;
+    }
+
+    &__body {
+      &::before {
+        width: 137px;
+        height: 225px;
+
+        bottom: -70px;
+        left: 80px;
+      }
+    }
+
+    &__title {
+      margin-top: 7px;
+      width: 248px;
+      height: 65px;
+
+      span {
+        font-size: 1em;
       }
     }
   }

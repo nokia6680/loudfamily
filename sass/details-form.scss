@@ -287,3 +287,45 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-hd) {
+  .details-form {
+    width: 378px;
+    height: 179px;
+
+    background-size: cover;
+
+    margin-bottom: 18px;
+
+    &__item {
+      &:nth-of-type(2) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__label {
+      font-size: 1.074em;
+      margin-bottom: 5px;
+
+      &--checkbox {
+        font-size: 0.83em;
+      }
+    }
+
+    &__input {
+      height: 39px;
+      background-size: contain;
+
+      font-size: 1.563em;
+
+      margin-bottom: 15px;
+
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__error {
+      font-size: 0.55em;
+    }
+  }
+}

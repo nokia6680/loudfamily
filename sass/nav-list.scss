@@ -129,7 +129,7 @@
   }
 }
 
-@media only screen and (min-width: $smt) {
+@media only screen and (min-width: $tablet) {
   .nav-list {
     &__link {
       padding-top: 20px;
@@ -149,6 +149,10 @@
     &__item {
       width: auto;
       @include flex-setting(column, center, center, nowrap);
+
+      box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+      -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+      -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
 
       &::after,
       &::before {
@@ -187,6 +191,32 @@
       padding-bottom: 0px;
 
       font-size: 1em;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .nav-list {
+    &__item {
+      &--prize {
+        background-size: 118px 45px;
+
+        width: 118px;
+        height: 45px;
+
+        margin-right: 20px;
+      }
+
+      &--rules {
+        background-size: 145px 45px;
+
+        width: 145px;
+        height: 45px;
+      }
+    }
+
+    &__link {
+      font-size: 1.25em;
     }
   }
 }

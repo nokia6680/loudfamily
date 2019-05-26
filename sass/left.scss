@@ -8,6 +8,7 @@
     width: 25%;
 
     padding-bottom: 5%;
+    margin-left: -1%;
 
     &__img {
       width: 205px;
@@ -63,6 +64,46 @@
         margin-top: -25px;
 
         transform: rotate(-1.5deg);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .left {
+    &__img {
+      width: 273px;
+      height: 302px;
+    }
+
+    /*Для EVENT*/
+
+    &--event {
+      padding-top: 100px;
+      padding-bottom: 0;
+
+      &::before {
+        width: 351px;
+        height: 590px;
+        background-size: cover;
+
+        bottom: -310px;
+        left: 5px;
+
+        transform: rotate(-2deg);
+      }
+    }
+
+    &__description {
+      background-size: 325px 200px;
+
+      width: 325px;
+      height: 200px;
+
+      span {
+        font-size: 1.103em;
+        margin-top: -45px;
+        transform: rotate(-1deg);
       }
     }
   }

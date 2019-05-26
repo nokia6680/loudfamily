@@ -71,3 +71,15 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-hd) {
+  .header {
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    &__logo {
+      width: 148px;
+      height: 21px;
+    }
+  }
+}

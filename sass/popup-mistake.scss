@@ -38,7 +38,7 @@
   }
 
   &__close {
-    @extend .popup-rules__close;
+    @extend .popup-prize__close;
 
     z-index: 1003;
   }
@@ -73,11 +73,24 @@
       width: 411px;
       height: 181px;
 
-      background-size: 411px 181px;
+      background-size: contain;
     }
 
     &__description {
       font-size: 1.875em;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .popup-mistake {
+    &__wrapper {
+      width: 293px;
+      height: 129px;
+    }
+
+    &__description {
+      font-size: 1.337em;
     }
   }
 }

@@ -343,3 +343,61 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-hd) {
+  .upload-form {
+    /*ФОРМА ЗАГРУЗКИ ФОТО*/
+    &__photo {
+      width: 389px;
+      height: 256px;
+
+      background-size: cover;
+
+      padding: 9px 9px;
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      width: 377px;
+      height: 245px;
+
+      padding-bottom: 25px;
+    }
+
+    &__description {
+      font-size: 1.123em;
+
+      padding-top: 100px;
+
+      width: 270px;
+
+      &::after {
+        background-size: cover;
+
+        width: 86px;
+        height: 79px;
+
+        top: 15px;
+        left: 50%;
+      }
+    }
+
+    &__label {
+      &--desktop {
+        font-size: 1.008em;
+
+        width: 165px;
+        height: 36px;
+
+        background-size: cover;
+      }
+    }
+
+    &__submit {
+      width: 204px;
+      height: 47px;
+      background-size: 204px 47px;
+      font-size: 1.334em;
+    }
+  }
+}

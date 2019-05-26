@@ -333,9 +333,14 @@
 
 @media only screen and (min-width: $laptop) {
   .intro {
+    @include container;
+
     &__logo {
       width: 220px;
       height: 134px;
+
+      padding-top: 20px;
+
     }
 
     &__opener,
@@ -348,7 +353,7 @@
       top: auto;
       left: auto;
 
-      padding-top: 0;
+      padding-top: 30px;
 
       width: auto;
 
@@ -360,6 +365,15 @@
     /*Для страницы EVENT - mobile*/
     &__description {
       display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .intro {
+    &__logo {
+      width: 293px;
+      height: 178px;
     }
   }
 }

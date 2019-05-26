@@ -12,7 +12,6 @@
   }
 
   @media only screen and (min-width: $smt) {
-    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 10px;
@@ -24,11 +23,16 @@
     padding: 0 30px;
   }
 
-  @media only screen and (min-width: $laptop-wide) {
-    width: 100%;
-    max-width: 100%;
+  @media only screen and (min-width: $laptop-hd) {
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: $laptop-wide) {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   @media only screen and (min-width: $widebook-hd) {
@@ -53,6 +57,10 @@
 
   @media only screen and (min-width: $laptop) {
     padding-left: 20px;
+  }
+
+  @media only screen and (min-width: $laptop-hd) {
+    padding-left: 30px;
   }
 }
 
@@ -90,6 +98,12 @@
     height: 18px;
     background-size: 18px 18px;
   }
+
+  @media only screen and (min-width: $laptop) {
+    width: 23px;
+    height: 24px;
+    background-size: contain;
+  }
 }
 
 @mixin custom-checkbox-2 {
@@ -126,6 +140,12 @@
     height: 18px;
     background-size: 18px 18px;
   }
+
+  @media only screen and (min-width: $laptop) {
+    width: 23px;
+    height: 24px;
+    background-size: contain;
+  }
 }
 
 @mixin checkbox-checked {
@@ -156,6 +176,13 @@
     height: 15px;
     background-size: 18px 15px;
     top: -2px;
+  }
+
+  @media only screen and (min-width: $laptop) {
+    width: 28px;
+    height: 24px;
+    background-size: contain;
+    top: -4px;
   }
 }
 
