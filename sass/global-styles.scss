@@ -42,6 +42,10 @@ html {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+
+  .intro__description {
+    display: none;
+  }
 }
 
 .body-event {

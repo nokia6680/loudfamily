@@ -51,6 +51,11 @@
     &--link {
       color: $text-primary;
       text-decoration: none;
+      border-bottom: 2px solid #ff6700;
+
+      &:hover {
+        color: #ff6700;
+      }
     }
   }
 
@@ -154,7 +159,7 @@
       font-size: 1.125em;
 
       &--checkbox {
-        font-size: 0.875em;
+        font-size: 0.85em;
       }
     }
 
@@ -330,7 +335,7 @@
   }
 }
 
-@media only screen and (min-width: $laptop-hd) {
+@media only screen and (min-width: $widebook-hd) {
   .details-form {
     width: 485px;
     height: 230px;

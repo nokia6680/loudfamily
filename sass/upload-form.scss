@@ -63,7 +63,8 @@
     width: 100%;
     height: 100%;
 
-    background-size: cover;
+    z-index: -1;
+    object-fit: scale-down;
     background-position: top center;
   }
 
@@ -156,6 +157,8 @@
     box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+
+    margin-bottom: 5px;
   }
 }
 

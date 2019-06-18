@@ -86,12 +86,12 @@
 						<ul class="upload-form__details details-form">
 							<li class="details-form__item">
 								<label class="details-form__label" for="phone">Номер телефона:</label>
-								<input class="details-form__input" type="tel" name="tel" id="phone"/>
+								<input class="details-form__input" type="tel" name="tel" id="phone" required />
 								<span class="details-form__error details-form__error--required">Это поле должно быть заполнено!</span>
 							</li>
 							<li class="details-form__item details-form__item--personal">
 								<input class="details-form__checkbox details-form__checkbox--personal visually-hidden" type="checkbox" name="agree" id="personal" required checked />
-								<label class="details-form__label details-form__label--checkbox" for="personal">Я согласен на<a class="details-form__label--link" href="#" target="_blank">обработку персональных данных</a></label>
+								<label class="details-form__label details-form__label--checkbox" for="personal">Я согласен на <a class="details-form__label--link" href="#" target="_blank">обработку персональных данных</a></label>
 								<span class="details-form__error details-form__error--personal">Это поле должно быть отмечено!</span>
 							</li>
 							<li class="details-form__item details-form__item--policy">
@@ -125,9 +125,6 @@
 					</li>
 					<li class="social-list__item">
 						<a class="social-list__link social-list__link--fb" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-					</li>
-					<li class="social-list__item">
-						<a class="social-list__link social-list__link--ok" href="#" target="_blank"><i class="fab fa-odnoklassniki"></i></a>
 					</li>
 					<li class="social-list__item">
 						<a class="social-list__link social-list__link--tw" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
