@@ -85,7 +85,7 @@
   }
 
   &__link {
-    @include font-setting($alternate-font, 1em, normal, 400, $text-primary);
+    @include font-setting($alternate-font, 1em, 1.2, 400, $text-primary);
     @include flex-setting(column, center, center, nowrap);
 
     display: inline-flex;

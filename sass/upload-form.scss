@@ -84,7 +84,7 @@
   }
 
   &__label {
-    @include font-setting($primary-font, 1.25em, normal, 400, $text-form);
+    @include font-setting($primary-font, 1.25em, 1.2, 400, $text-form);
     @include flex-setting(column, center, center, nowrap);
 
     width: 200px;
@@ -134,7 +134,7 @@
 
   &__submit {
     @include flex-setting(column, center, center, nowrap);
-    @include font-setting($alternate-font, 1.25em, normal, 400, $text-primary);
+    @include font-setting($alternate-font, 1.25em, 1.2, 400, $text-primary);
 
     display: inline-flex;
 
@@ -287,7 +287,7 @@
     }
 
     &__description {
-      @include font-setting($primary-font, 0.875em, normal, 400, $text-form);
+      @include font-setting($primary-font, 0.875em, 1.2, 400, $text-form);
 
       display: inline-flex;
       text-align: center;

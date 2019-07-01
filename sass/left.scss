@@ -58,13 +58,18 @@
       height: 150px;
 
       span {
-        @include font-setting($primary-font, 0.875em, normal, 400, $text-primary);
+        @include font-setting($primary-font, 0.875em, 1.2, 400, $text-primary);
 
         text-align: center;
         margin-top: -25px;
 
         transform: rotate(-1.5deg);
       }
+    }
+
+    &--winner {
+      justify-content: center;
+      padding-top: 0;
     }
   }
 }
@@ -106,6 +111,11 @@
         transform: rotate(-1deg);
       }
     }
+
+    &--winner {
+      justify-content: center;
+      padding-top: 5%;
+    }
   }
 }
 
@@ -139,6 +149,15 @@
         font-size: 1.438em;
         margin-top: -55px;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .left {
+    &--winner {
+      justify-content: center;
+      padding-top: 10%;
     }
   }
 }

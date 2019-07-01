@@ -1,0 +1,94 @@
+.middle-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include flex-setting(column, flex-start, center, nowrap);
+
+  width: 243px;
+  background-image: url('../img/winner-list-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &__item {
+    @include flex-setting(column, flex-start, center, nowrap);
+
+    width: 100%;
+
+    margin-bottom: 3px;
+  }
+
+  &__name {
+    @include font-setting($primary-font, 1.375em, 1.2, 400, $text-primary);
+  }
+
+  &__city {
+    @include font-setting($primary-font, 1em, 1, 400, $text-primary);
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .middle-list {
+    width: 324px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__item {
+      margin-bottom: 7px;
+    }
+
+    &__name {
+      font-size: 1.75em;
+    }
+
+    &__city {
+      font-size: 1.125em;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .middle-list {
+    width: 303px;
+
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    &__item {
+      margin-bottom: 5px;
+    }
+
+    &__name {
+      font-size: 1.75em;
+    }
+
+    &__city {
+      font-size: 1.063em;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .middle-list {
+    width: 368px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__item {
+      margin-bottom: 5px;
+    }
+
+    &__name {
+      font-size: 2.188em;
+    }
+
+    &__city {
+      font-size: 1.25em;
+    }
+  }
+}

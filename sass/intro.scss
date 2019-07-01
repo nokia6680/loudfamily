@@ -51,7 +51,7 @@
     position: relative;
 
     span {
-      @include font-setting($primary-font, 0.5em, normal, 400, $text-primary);
+      @include font-setting($primary-font, 0.5em, 1.2, 400, $text-primary);
       text-align: center;
       transform: rotate(1.5deg);
     }

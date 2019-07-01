@@ -62,7 +62,7 @@
   }
 
   &__description {
-    @include font-setting($primary-font, 1.25em, normal,400, $text-primary);
+    @include font-setting($primary-font, 1.25em, 1.2,400, $text-primary);
     text-align: center;
   }
 }

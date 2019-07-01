@@ -28,7 +28,7 @@
     position: relative;
 
     span {
-      @include font-setting($primary-font, 0.65em, normal, 400, $text-primary);
+      @include font-setting($primary-font, 0.65em, 1.2, 400, $text-primary);
       text-align: center;
     }
 
@@ -89,7 +89,6 @@
     position: relative;
   }
 
-
   &__video {
     position: absolute;
     top: 50%;
@@ -128,6 +127,102 @@
     box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.5);
+  }
+
+  /*Для страницы победителей*/
+
+  &__title {
+    @include font-setting($alternate-font, 1.25em, 1.2, 400, #ffffff);
+    @include flex-setting(column, center, center, nowrap);
+    width: 273px;
+    height: 34px;
+    background-image: url('../img/winner-title-sec-bg.png');
+    background-size: cover;
+
+    margin-top: 0px;
+    margin-bottom: 8px;
+    padding-top: 2px;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      width: 124px;
+      height: 96px;
+
+      background-image: url('../img/happy-man-sm.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      top: -82px;
+      right: 40px;
+
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      width: 14px;
+      height: 17px;
+
+      background-image: url('../img/pigtail.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      top: -14px;
+      right: -14px;
+    }
+
+    &--wrap {
+      @include flex-setting(row, center, center, nowrap);
+      transform: rotate(1deg);
+    }
+
+    &--upper {
+      margin-right: 7px;
+    }
+  }
+
+  &__subtitle {
+    @include font-setting($alternate-font, 1.25em, 1.2, 400, #ffffff);
+    @include flex-setting(column, center, center, nowrap);
+
+    width: 217px;
+    height: 59px;
+
+    background-image: url('../img/secondary-title-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding-top: 2px;
+
+    &--wrap {
+      transform: rotate(-1deg);
+    }
+  }
+
+  &__wrapper {
+    @include flex-setting(column, flex-start, center, nowrap);
+    width: 243px;
+    background-image: url('../img/main-winner-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-top: 19px;
+    padding-bottom: 20px;
+
+    margin-bottom: 5px;
+  }
+
+  &__winner {
+    @include font-setting($primary-font, 1.375em, 1.2, 400, $text-primary);
   }
 }
 
@@ -177,7 +272,6 @@
 
       margin-bottom: 50px;
     }
-
 
     &__video {
       width: 304px;
@@ -233,7 +327,6 @@
       margin-bottom: 50px;
     }
 
-
     &__video {
       width: 340px;
       height: 186px;
@@ -246,6 +339,58 @@
       height: 63px;
 
       background-size: 269px 63px;
+    }
+
+    /*Для страницы победителей*/
+
+    &__title {
+      font-size: 1.5em;
+
+      width: 355px;
+      height: 44px;
+
+      margin-top: 0px;
+      margin-bottom: 8px;
+
+      &::before {
+        width: 161px;
+        height: 124px;
+
+        top: -114px;
+        right: 40px;
+      }
+
+      &::after {
+        width: 18px;
+        height: 22px;
+
+        top: -14px;
+        right: -14px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 1.5em;
+
+      width: 282px;
+      height: 76px;
+      padding-top: 5px;
+
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &__wrapper {
+      width: 323px;
+
+      padding-top: 29px;
+      padding-bottom: 29px;
+
+      margin-bottom: 5px;
+    }
+
+    &__winner {
+      font-size: 1.75em;
     }
   }
 }
@@ -403,10 +548,62 @@
       background-size: 591px 343px;
     }
 
-
     &__video {
       width: 552px;
       height: 303px;
+    }
+
+    /*Для страницы победителей*/
+
+    &__title {
+      font-size: 2.5em;
+
+      width: 547px;
+      height: 69px;
+
+      margin-top: 0px;
+      padding-top: 5px;
+      margin-bottom: 8px;
+
+      &::before {
+        width: 248px;
+        height: 192px;
+
+        top: -182px;
+        right: 40px;
+      }
+
+      &::after {
+        width: 29px;
+        height: 35px;
+
+        top: -14px;
+        right: -14px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 2.5em;
+
+      width: 435px;
+      height: 118px;
+
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding-top: 7px;
+    }
+
+    &__wrapper {
+      width: 323px;
+
+      padding-top: 29px;
+      padding-bottom: 29px;
+
+      margin-bottom: 5px;
+    }
+
+    &__winner {
+      font-size: 1.75em;
     }
   }
 }
@@ -463,11 +660,77 @@
         display: none;
       }
     }
+
+    /*Для страницы победителей*/
+
+    &--winner {
+      margin-top: -40px;
+    }
+
+    &__title {
+      font-size: 2.25em;
+
+      width: 315px;
+      height: 104px;
+
+      background-image: url('../img/winner-title-bg.png');
+
+      margin-top: 0px;
+      margin-bottom: 5px;
+
+      &--wrap {
+        flex-direction: column;
+      }
+
+      &--upper {
+        transform: rotate(-3deg);
+      }
+
+      &--lower {
+        transform: rotate(0deg);
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        width: 29px;
+        height: 35px;
+
+        bottom: 0px;
+        top: auto;
+        right: -25px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 2.25em;
+
+      width: 402px;
+      height: 113px;
+
+      margin-top: -10px;
+      margin-bottom: 0px;
+    }
+
+    &__wrapper {
+      width: 300px;
+
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      margin-bottom: 5px;
+      margin-top: -5px;
+    }
   }
 }
 
 @media only screen and (min-width: $laptop-hd) {
   .middle {
+    &--winner {
+      margin-top: -60px;
+    }
     &__description {
       padding-top: 8px;
       padding-bottom: 8px;
@@ -507,6 +770,71 @@
   }
 }
 
+@media only screen and (min-width: $laptop-wide) {
+  .middle {
+    &--winner {
+      margin-top: -80px;
+    }
+
+    &__title {
+      font-size: 2.25em;
+
+      width: 315px;
+      height: 104px;
+
+      background-image: url('../img/winner-title-bg.png');
+
+      margin-top: 0px;
+      margin-bottom: 5px;
+
+      &--wrap {
+        flex-direction: column;
+      }
+
+      &--upper {
+        transform: rotate(-3deg);
+      }
+
+      &--lower {
+        transform: rotate(0deg);
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        width: 29px;
+        height: 35px;
+
+        bottom: 0px;
+        top: auto;
+        right: -25px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 2.25em;
+
+      width: 402px;
+      height: 113px;
+
+      margin-top: -10px;
+      margin-bottom: 0px;
+    }
+
+    &__wrapper {
+      width: 300px;
+
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      margin-bottom: 5px;
+      margin-top: -5px;
+    }
+  }
+}
+
 @media only screen and (min-width: $widebook-hd) {
   .middle {
     &__description {
@@ -541,6 +869,63 @@
       height: 63px;
       background-size: cover;
       font-size: 1.75em;
+    }
+
+    &--winner {
+      margin-top: -80px;
+    }
+
+    &__title {
+      font-size: 2.813em;
+
+      width: 380px;
+      height: 125px;
+      margin-bottom: 13px;
+
+      &--upper {
+        transform: rotate(-3deg);
+      }
+
+      &--lower {
+        transform: rotate(0deg);
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        width: 32px;
+        height: 40px;
+
+        bottom: 0px;
+        top: auto;
+        right: -25px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 2.813em;
+
+      width: 486px;
+      height: 137px;
+
+      margin-top: -10px;
+      margin-bottom: 0px;
+    }
+
+    &__wrapper {
+      width: 368px;
+
+      padding-top: 32px;
+      padding-bottom: 34px;
+
+      margin-bottom: 5px;
+      margin-top: -5px;
+    }
+
+    &__winner {
+      font-size: 2.188em;
     }
   }
 }
